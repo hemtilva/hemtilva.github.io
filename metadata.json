@@ -1,6 +1,6 @@
 {
-  "name": "Hem Tilva — Systems & Software Engineering Portfolio",
-  "description": "Personal portfolio of Hem Tilva, computer science undergraduate at IIT Gandhinagar focusing on systems engineering, kernel internals, and algorithmic data structures.",
+  "name": "Hem Tilva — Systems Engineering & ICPC Regionalist Portfolio",
+  "description": "Personal portfolio of Hem Tilva, computer science undergraduate at IIT Gandhinagar and ICPC Regionalist focusing on systems engineering, kernel internals, and algorithmic data structures.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

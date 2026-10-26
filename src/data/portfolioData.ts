@@ -25,8 +25,8 @@ export interface ProjectEntry {
   }[];
   engineeringTradeoffs: string;
   stack: string[];
-  githubUrlPlaceholder: string;
-  githubLabelPlaceholder: string;
+  githubUrl: string;
+  githubLabel: string;
 }
 
 export interface EducationData {
@@ -46,31 +46,31 @@ export interface EducationData {
 export interface ContactData {
   heading: string;
   subcopy: string;
-  emailPlaceholder: string;
+  email: string;
   emailHref: string;
   links: {
     platform: string;
-    handlePlaceholder: string;
-    hrefPlaceholder: string;
+    handle: string;
+    href: string;
   }[];
 }
 
+export const SHOW_EXPERIENCE = false;
+
 export const PORTFOLIO_SECTIONS = [
   { id: 'hero', number: '01', label: 'Overview' },
-  { id: 'experience', number: '02', label: 'Experience' },
-  { id: 'projects', number: '03', label: 'Projects' },
-  { id: 'education', number: '04', label: 'Education' },
-  { id: 'contact', number: '05', label: 'Contact' },
+  { id: 'education', number: '02', label: 'Education' },
+  { id: 'contact', number: '03', label: 'Contact' },
 ] as const;
 
 export const HERO_DATA = {
   name: 'Hem Tilva',
-  roleKicker: 'SYSTEMS & SOFTWARE ENGINEERING · IIT GANDHINAGAR',
+  roleKicker: 'SYSTEMS ENGINEERING & COMPETITIVE PROGRAMMING · IIT GANDHINAGAR',
   headline: 'Building software from first principles with deliberate engineering trade-offs.',
-  lead: 'I am a software engineer focused on low-level systems, operating system internals, and space-efficient data structures. I care deeply about how abstractions map to hardware—balancing memory footprint, cache locality, concurrency, and maintainability.',
+  lead: 'I am a computer science student and software engineer at IIT Gandhinagar focused on low-level systems, operating system internals, and space-efficient data structures. An active competitive programmer and ICPC Regionalist, I care deeply about how abstractions map to hardware—balancing algorithmic complexity, memory footprint, cache locality, and concurrency.',
   primaryCta: {
-    label: 'Explore Selected Projects',
-    href: '#projects',
+    label: 'Explore Projects',
+    href: '#/projects',
   },
   secondaryCta: {
     label: 'Initiate Contact',
@@ -83,17 +83,17 @@ export const EXPERIENCE_DATA: ExperienceEntry[] = [
     id: 'deshaw-internship',
     index: '01',
     organization: 'D. E. Shaw & Co.',
-    titlePlaceholder: '[Role Title Placeholder — e.g., Software Engineering Intern]',
-    datesPlaceholder: '[Dates Placeholder — e.g., Summer 2026]',
-    locationPlaceholder: '[Location Placeholder — e.g., Hyderabad / Bengaluru]',
+    titlePlaceholder: 'Software Engineering Intern',
+    datesPlaceholder: 'Summer 2026',
+    locationPlaceholder: 'Hyderabad / Bengaluru',
     summary:
-      'Upcoming or unconfirmed internship details reserved with explicit placeholders for dates, formal title, and specific project deliverables.',
+      'Upcoming internship at D. E. Shaw & Co. focusing on systems architecture and core engineering infrastructure.',
     responsibilitiesPlaceholder: [
-      '[Responsibility Placeholder 01 — Systems architecture, low-latency infrastructure, or core platform engineering scope to be updated]',
-      '[Responsibility Placeholder 02 — Design trade-offs, throughput/reliability engineering, and internal tooling contributions to be updated]',
-      '[Responsibility Placeholder 03 — Cross-team technical collaboration and production deployment milestones to be updated]',
+      'Low-latency infrastructure and systems engineering.',
+      'Core platform tooling and distributed reliability engineering.',
+      'Cross-team technical collaboration and production milestones.',
     ],
-    isPlaceholderNote: 'PLACEHOLDER RECORD · AWAITING CONFIRMED DATES, TITLE & SCOPE',
+    isPlaceholderNote: 'UPCOMING INTERNSHIP',
   },
 ];
 
@@ -123,8 +123,8 @@ export const PROJECTS_DATA: ProjectEntry[] = [
     engineeringTradeoffs:
       'Prioritized cache-resident block access and compact bit-packing over unaligned multi-probe scattering to reduce memory bus traffic on negative lookups.',
     stack: ['C / C++', 'Probabilistic Data Structures', 'Bitwise Optimization', 'Memory Hierarchy'],
-    githubUrlPlaceholder: 'https://github.com/your-username/spatial-bloom-filters-placeholder',
-    githubLabelPlaceholder: 'github.com/your-username/spatial-bloom-filters-placeholder',
+    githubUrl: 'https://github.com/hemtilva/spatial-bloom-filters',
+    githubLabel: 'github.com/hemtilva/spatial-bloom-filters',
   },
   {
     id: 'xv6-ksm',
@@ -151,8 +151,8 @@ export const PROJECTS_DATA: ProjectEntry[] = [
     engineeringTradeoffs:
       'Traded background kernel scanning CPU cycles and page-fault trap latency on writes for reduced physical RAM consumption across processes sharing identical memory pages.',
     stack: ['C', 'xv6 Kernel', 'Virtual Memory & PTEs', 'Copy-on-Write', 'OS Internals'],
-    githubUrlPlaceholder: 'https://github.com/your-username/xv6-ksm-placeholder',
-    githubLabelPlaceholder: 'github.com/your-username/xv6-ksm-placeholder',
+    githubUrl: 'https://github.com/hemtilva/xv6-ksm',
+    githubLabel: 'github.com/hemtilva/xv6-ksm',
   },
   {
     id: 'academic-doubt-platform',
@@ -179,8 +179,8 @@ export const PROJECTS_DATA: ProjectEntry[] = [
     engineeringTradeoffs:
       'Chose strict relational normalization and explicit thread resolution states over unstructured chat streams to preserve long-term searchability across academic semesters.',
     stack: ['Full-Stack Architecture', 'Relational Data Modeling', 'REST APIs', 'Role-Based Access'],
-    githubUrlPlaceholder: 'https://github.com/your-username/academic-doubt-platform-placeholder',
-    githubLabelPlaceholder: 'github.com/your-username/academic-doubt-platform-placeholder',
+    githubUrl: 'https://github.com/hemtilva/academic-doubt-platform',
+    githubLabel: 'github.com/hemtilva/academic-doubt-platform',
   },
 ];
 
@@ -192,35 +192,40 @@ export const EDUCATION_DATA: EducationData = {
   cpiScale: '10.00',
   honors: [
     {
+      title: 'ICPC Regionalist',
+      term: 'Competitive Programming',
+      academicYear: 'Regional Contestant',
+    },
+    {
       title: 'Dean’s List Award',
       term: 'Semester I',
       academicYear: 'AY 2025–26',
     },
   ],
   focusAreas: [
-    'Operating Systems',
-    'Data Structures & Algorithms',
-    'Computer Architecture',
-    'Systems Programming',
+    'Competitive Programming (ICPC Regionalist)',
+    'Algorithms & Space-Time Optimization',
+    'Operating Systems & Kernel Internals',
+    'Computer Architecture & Systems',
   ],
 };
 
 export const CONTACT_DATA: ContactData = {
   heading: 'Have something interesting to build?',
   subcopy:
-    'Available for systems engineering discussions, research collaborations, and software engineering opportunities. Direct correspondence via email or GitHub.',
-  emailPlaceholder: 'your.email@placeholder.com',
-  emailHref: 'mailto:your.email@placeholder.com',
+    'Available for systems engineering discussions, competitive programming collaborations, research, and software engineering opportunities. Direct correspondence via email, GitHub, or LinkedIn.',
+  email: 'hemytilva@gmail.com',
+  emailHref: 'mailto:hemytilva@gmail.com',
   links: [
     {
       platform: 'GitHub',
-      handlePlaceholder: 'github.com/your-username-placeholder',
-      hrefPlaceholder: 'https://github.com/your-username-placeholder',
+      handle: 'hemtilva',
+      href: 'https://github.com/hemtilva',
     },
     {
       platform: 'LinkedIn',
-      handlePlaceholder: 'linkedin.com/in/your-profile-placeholder',
-      hrefPlaceholder: 'https://linkedin.com/in/your-profile-placeholder',
+      handle: 'hemtilva',
+      href: 'https://www.linkedin.com/in/hemtilva/',
     },
   ],
 };
@@ -233,26 +238,4 @@ export function filterProjectsByCategory(
     return projects;
   }
   return projects.filter((project) => project.category === category);
-}
-
-export function validatePortfolioIntegrity() {
-  const sectionIds = PORTFOLIO_SECTIONS.map((s) => s.id);
-  const expectedOrder = ['hero', 'experience', 'projects', 'education', 'contact'];
-  const isOrderValid =
-    sectionIds.length === expectedOrder.length &&
-    sectionIds.every((id, idx) => id === expectedOrder[idx]);
-
-  const hasExactThreeProjects = PROJECTS_DATA.length === 3;
-  const hasVerifiedEducation =
-    EDUCATION_DATA.cpi === '9.34' &&
-    EDUCATION_DATA.institution.includes('IIT') &&
-    EDUCATION_DATA.honors.some(
-      (h) => h.title === 'Dean’s List Award' && h.term === 'Semester I' && h.academicYear === 'AY 2025–26'
-    );
-
-  return {
-    isOrderValid,
-    hasExactThreeProjects,
-    hasVerifiedEducation,
-  };
 }

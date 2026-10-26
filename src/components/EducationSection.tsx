@@ -14,7 +14,7 @@ export const EducationSection: React.FC = () => {
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5 text-xs font-mono font-semibold uppercase tracking-[0.08em] text-[#E53935] mb-3">
               <span className="inline-block w-2 h-2 bg-[#E53935]" aria-hidden="true" />
-              <span>04. Academic Record</span>
+              <span>02. Academic Record &amp; Honors</span>
             </div>
             <h2
               id="education-heading"
@@ -23,7 +23,7 @@ export const EducationSection: React.FC = () => {
               Education
             </h2>
             <p className="text-[15px] leading-[24px] text-[#444748] max-w-sm">
-              Undergraduate computer science curriculum grounded in systems programming, algorithms, and computer architecture.
+              Undergraduate computer science curriculum grounded in algorithms, competitive programming, systems programming, and computer architecture.
             </p>
           </div>
 
@@ -62,10 +62,11 @@ export const EducationSection: React.FC = () => {
 
               {/* Honors & Academic Distinction Row */}
               <div className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-[#D8D3C8]">
-                <div className="md:col-span-7 p-6 md:p-8 bg-[#EFECE4]">
-                  <div className="text-[11px] font-mono font-semibold uppercase tracking-[0.08em] text-[#767167] mb-4">
-                    ACADEMIC HONORS &amp; DISTINCTIONS
+                <div className="md:col-span-7 p-6 md:p-8 bg-[#EFECE4] space-y-4">
+                  <div className="text-[11px] font-mono font-semibold uppercase tracking-[0.08em] text-[#767167]">
+                    ACADEMIC &amp; COMPETITIVE HONORS
                   </div>
+
                   {EDUCATION_DATA.honors.map((honor) => (
                     <div
                       key={honor.title}
@@ -80,7 +81,7 @@ export const EducationSection: React.FC = () => {
                           {honor.title}
                         </div>
                         <div className="text-xs font-mono text-[#767167] mt-1">
-                          {honor.term} · {honor.academicYear} · IIT Gandhinagar
+                          {honor.term} · {honor.academicYear}
                         </div>
                       </div>
                     </div>
@@ -91,7 +92,7 @@ export const EducationSection: React.FC = () => {
                 <div className="md:col-span-5 p-6 md:p-8 flex flex-col justify-between">
                   <div>
                     <div className="text-[11px] font-mono font-semibold uppercase tracking-[0.08em] text-[#767167] mb-4">
-                      CORE SYSTEMS AREAS
+                      KEY FOCUS AREAS
                     </div>
                     <ul className="space-y-2.5 text-sm font-mono text-[#191919]">
                       {EDUCATION_DATA.focusAreas.map((area, index) => (
