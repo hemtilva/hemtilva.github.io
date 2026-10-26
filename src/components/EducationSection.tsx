@@ -23,7 +23,7 @@ export const EducationSection: React.FC = () => {
               Education
             </h2>
             <p className="text-[15px] leading-[24px] text-[#444748] max-w-sm">
-              Undergraduate computer science curriculum grounded in algorithms, competitive programming, systems programming, and computer architecture.
+              Undergraduate computer science curriculum grounded in systems programming, algorithms, and computer architecture.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export const EducationSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-[#D8D3C8]">
                 <div className="md:col-span-7 p-6 md:p-8 bg-[#EFECE4] space-y-4">
                   <div className="text-[11px] font-mono font-semibold uppercase tracking-[0.08em] text-[#767167]">
-                    ACADEMIC &amp; COMPETITIVE HONORS
+                    HONORS &amp; DISTINCTIONS
                   </div>
 
                   {EDUCATION_DATA.honors.map((honor) => (

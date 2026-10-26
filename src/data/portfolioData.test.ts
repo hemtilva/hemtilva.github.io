@@ -49,12 +49,12 @@ test('filterProjectsByCategory filters accurately and returns all for All', () =
   );
 });
 
-test('education section includes IIT Gandhinagar B.Tech, CPI 9.34/10, Dean’s List, and ICPC Regionalist', () => {
+test('education section includes IIT Gandhinagar B.Tech, CPI 9.34/10, Dean’s List, and IICPC Regionalist', () => {
   assert.equal(EDUCATION_DATA.period, '2024 – Present');
   assert.equal(EDUCATION_DATA.cpi, '9.34');
   assert.ok(
-    EDUCATION_DATA.honors.some((h) => h.title === 'ICPC Regionalist'),
-    'Should include ICPC Regionalist honor'
+    EDUCATION_DATA.honors.some((h) => h.title === 'IICPC Regionalist'),
+    'Should include IICPC Regionalist honor'
   );
   assert.ok(
     EDUCATION_DATA.honors.some((h) => h.title === 'Dean’s List Award'),

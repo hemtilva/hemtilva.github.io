@@ -139,7 +139,7 @@ export default function App() {
           <div>
             <span className="text-[#191919] font-semibold">Hem Tilva</span>
             <span className="mx-2" aria-hidden="true">·</span>
-            <span>B.Tech. CSE, IIT Gandhinagar · ICPC Regionalist</span>
+            <span>B.Tech. CSE, IIT Gandhinagar</span>
           </div>
 
           <div className="flex items-center gap-6">

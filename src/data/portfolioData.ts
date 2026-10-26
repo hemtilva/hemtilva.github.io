@@ -65,9 +65,9 @@ export const PORTFOLIO_SECTIONS = [
 
 export const HERO_DATA = {
   name: 'Hem Tilva',
-  roleKicker: 'SYSTEMS ENGINEERING & COMPETITIVE PROGRAMMING · IIT GANDHINAGAR',
+  roleKicker: 'SYSTEMS & SOFTWARE ENGINEERING · IIT GANDHINAGAR',
   headline: 'Building software from first principles with deliberate engineering trade-offs.',
-  lead: 'I am a computer science student and software engineer at IIT Gandhinagar focused on low-level systems, operating system internals, and space-efficient data structures. An active competitive programmer and ICPC Regionalist, I care deeply about how abstractions map to hardware—balancing algorithmic complexity, memory footprint, cache locality, and concurrency.',
+  lead: 'I am a computer science student at IIT Gandhinagar focused on low-level systems, operating system internals, and space-efficient data structures. I care deeply about how abstractions map to hardware—balancing memory footprint, cache locality, concurrency, and algorithmic efficiency.',
   primaryCta: {
     label: 'Explore Projects',
     href: '#/projects',
@@ -192,28 +192,28 @@ export const EDUCATION_DATA: EducationData = {
   cpiScale: '10.00',
   honors: [
     {
-      title: 'ICPC Regionalist',
-      term: 'Competitive Programming',
-      academicYear: 'Regional Contestant',
-    },
-    {
       title: 'Dean’s List Award',
       term: 'Semester I',
       academicYear: 'AY 2025–26',
     },
+    {
+      title: 'IICPC Regionalist',
+      term: 'Competitive Programming',
+      academicYear: 'Regional Contestant',
+    },
   ],
   focusAreas: [
-    'Competitive Programming (ICPC Regionalist)',
-    'Algorithms & Space-Time Optimization',
     'Operating Systems & Kernel Internals',
+    'Algorithms & Space-Time Optimization',
     'Computer Architecture & Systems',
+    'Competitive Programming',
   ],
 };
 
 export const CONTACT_DATA: ContactData = {
   heading: 'Have something interesting to build?',
   subcopy:
-    'Available for systems engineering discussions, competitive programming collaborations, research, and software engineering opportunities. Direct correspondence via email, GitHub, or LinkedIn.',
+    'Available for systems engineering discussions, research collaborations, and software engineering opportunities. Direct correspondence via email, GitHub, or LinkedIn.',
   email: 'hemytilva@gmail.com',
   emailHref: 'mailto:hemytilva@gmail.com',
   links: [

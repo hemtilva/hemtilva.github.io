@@ -31,10 +31,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigateToProjects }
           {/* Left 8 Columns: Monumental Name, Systems Philosophy, Primary & Contact CTAs */}
           <div className="lg:col-span-8 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#EFECE4] border border-[#191919] text-xs font-mono font-medium text-[#191919] mb-4">
-                <span className="inline-block w-2 h-2 bg-[#E53935]" aria-hidden="true" />
-                <span>ICPC Regionalist · Competitive Programmer</span>
-              </div>
+              <p className="text-xs font-mono uppercase tracking-[0.08em] text-[#767167] mb-4">
+                Software Engineer · Systems &amp; Architecture
+              </p>
 
               <h1
                 id="hero-heading"
@@ -98,20 +97,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigateToProjects }
               <dl className="divide-y divide-[#D8D3C8] text-sm">
                 <div className="py-3.5 flex flex-col gap-1">
                   <dt className="text-[11px] font-mono uppercase tracking-[0.08em] text-[#767167]">
-                    Competitive Programming
-                  </dt>
-                  <dd className="font-semibold text-[#191919] flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 bg-[#E53935]" aria-hidden="true" />
-                    <span>ICPC Regionalist</span>
-                  </dd>
-                </div>
-
-                <div className="py-3.5 flex flex-col gap-1">
-                  <dt className="text-[11px] font-mono uppercase tracking-[0.08em] text-[#767167]">
                     Core Discipline
                   </dt>
                   <dd className="font-medium text-[#191919]">
-                    Systems Engineering · Kernel Internals · Probabilistic Data Structures
+                    Operating Systems · Kernel Internals · Systems Programming
                   </dd>
                 </div>
 
@@ -126,10 +115,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigateToProjects }
 
                 <div className="py-3.5 flex flex-col gap-1">
                   <dt className="text-[11px] font-mono uppercase tracking-[0.08em] text-[#767167]">
-                    Engineering Focus
+                    Engineering Approach
                   </dt>
                   <dd className="text-[#444748] text-[13px] leading-[20px]">
-                    Deliberate space-time trade-offs, page-level memory allocation, bitwise optimizations, and clean low-level abstractions.
+                    Deliberate space-time trade-offs, page-level memory allocation, cache locality, and low-level abstractions.
                   </dd>
                 </div>
               </dl>
