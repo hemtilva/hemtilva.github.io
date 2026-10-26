@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas-base: #F7F4EE;
+    --sub-surface: #EFECE4;
+    --carbon-black: #191919;
+    --hairline-muted: #D8D3C8;
+    --muted-stone: #767167;
+    --signal-red: #E53935;
+  }
+
+  * {
+    border-radius: 0px !important;
+  }
+
+  html {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F7F4EE;
+    color: #191919;
+    scroll-behavior: smooth;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.swiss-hard-offset {
+  transition: transform 100ms linear, box-shadow 100ms linear, border-color 100ms linear;
+}
+
+.swiss-hard-offset:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px 0px #191919;
+}
+
+.swiss-hard-offset-red:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px 0px #E53935;
+}
